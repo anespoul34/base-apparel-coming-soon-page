@@ -27,17 +27,37 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <div class="email-container">
-        <input type="text" placeholder="Email Address">
-        <button aria-label="submit">
+      <form id="email-form" class="email-container">
+        <input id="email" type="text" name="email" placeholder="Email Address" onchange="handleChange()">
+        <button type="submit" aria-label="submit" >
           <img src="./images/icon-arrow.svg" alt="arrow icon">
         </button>
-      </div>
+        <img class="error" src="./images/icon-error.svg" alt="error icon">
+        <p class="error">Please provide a valid email</p>
+      </form>
     </section>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | 
     <a href="https://github.com/anespoul34" target="_blank">Coded</a> by <a href="https://www.arthurnespoulous.com" target="_blank">AN</a>. 
   </footer>
+
+  <script>
+    let form = document.getElementById('email-form');
+    let email = document.getElementById('email');
+
+    function validateEmail(email) {
+      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+    function handleChange() {
+      if (validateEmail(email.value)) {
+        form.classList.remove('error');
+        return;
+      } else {
+        form.classList.add('error');
+      }
+    }
+  </script>
 </body>
 </html>

@@ -115,7 +115,7 @@ main {
 .email-container {
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 50px;
   margin: 12px 0 0 0;
 }
 .email-container input {
@@ -134,10 +134,11 @@ main {
   font-weight: 300;
 }
 .email-container button {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0%;
-  transform: translateY(-30px);
+  transform: translateY(-50%);
   width: 80px;
   height: 100%;
   border-radius: 30px;
@@ -145,7 +146,31 @@ main {
   background: var(--linear2);
   box-shadow: 0 15px 20px -10px var(--primary);
 }
+.email-container button:hover {
+  background: linear-gradient(135deg, hsl(0, 86%, 92%) 0%, hsl(0, 95%, 84%) 100%);
+  box-shadow: 0 5px 10px 0px var(--primary);
+}
 
+form.error input {
+  border: 1px solid #F96464;
+}
+form .error {
+  display: none;
+}
+form.error .error {
+  display: block;
+}
+form.error img.error {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+form.error p.error {
+  font-size: 0.8rem;
+  color: #F96464;
+  margin: 5px 0 0 20px;
+}
 
 @media screen and (min-width: 768px) {
   html,
@@ -173,17 +198,39 @@ main {
   .banner img {
     width: auto;
     min-height: 100%;
+    height: 100%;
   }
   main {
     flex-direction: row-reverse;
   }
   .container {
     flex: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 250px 0 180px;
+    background: url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
   }
+  .container header {
+    margin-bottom: 80px;
+  }
+  .container h1,
+  .container p {
+    text-align: left;
+  }
+  .container h1,
+  .container h1 span {
+    font-size: 4rem;
+  }
+  .container p,
+  .container .email-container {
+    max-width: 450px;
+  }
+
   .attribution {
     position: absolute;
     bottom: 10px;
-    left: 70px;
+    left: 180px;
     width: auto;
   }
 }
