@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [link](link)
-- Live Site URL: [link](link)
+- Solution URL: [link](https://www.frontendmentor.io/solutions/page-in-htmlcss-BKVhoB5VTw)
+- Live Site URL: [link](https://base-apparel-coming-soon-page-liart.vercel.app/)
 
 ### Built with
 
