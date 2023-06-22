@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![header](https://github.com/anespoul34/link/blob/main/images/screenshot.png)
+![header](https://github.com/anespoul34/base-apparel-coming-soon-page/blob/main/images/screenshot.png)
 
 ### Links
 
